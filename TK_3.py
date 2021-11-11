@@ -1,4 +1,4 @@
-def get_cortege(list_data):
+def get_division(list_data):
     average = 1
     if len(list_data) > 0:
         average = sum(list_data)/len(list_data)
