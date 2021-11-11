@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import importlib
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from TK_1 import input_data_from_console
+from TK_2 import get_cortege
+from TK_3 import get_division
+from TK_4 import get_multiplication
 
 
-# Press the green button in the gutter to run the script.
+def main():
+    TK_5 = importlib.import_module('TK-5')
+    count = int(input('Get count data: '))
+    list_data = input_data_from_console(count)
+    print('List:', list_data)
+    print('Min and max:', get_cortege(list_data))
+    print('Division:', get_division(list_data))
+    print('Multiplication:', get_multiplication(list_data))
+    print('Square:', TK_5.get_square(list_data))
+    return 0
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
